@@ -33,4 +33,17 @@ public class MultiplyFractionsTest {
         Assertions.assertEquals(new Fraction(1, 6), new Fraction(1, 2).times(new Fraction(1, 3)));
         Assertions.assertEquals(new Fraction(5, 4), new Fraction(1, 2).times(new Fraction(5, 2)));
     }
+
+    @Test
+    void multiplyingAndReducingFractions() {
+        Assertions.assertEquals(new Fraction(3, 25), new Fraction(3, 5).times(new Fraction(3, 15)));
+        Assertions.assertEquals(new Fraction(1, 6), new Fraction(5, 6).times(new Fraction(3, 15)));
+    }
+
+    @Test
+    void multiplyingNegativeFractions() {
+        Assertions.assertEquals(new Fraction(-3, 25), new Fraction(-3, 5).times(new Fraction(3, 15)));
+        Assertions.assertEquals(new Fraction(-3, 25), new Fraction(3, 5).times(new Fraction(-3, 15)));
+        Assertions.assertEquals(new Fraction(3, 25), new Fraction(-3, 5).times(new Fraction(-3, 15)));
+    }
 }
