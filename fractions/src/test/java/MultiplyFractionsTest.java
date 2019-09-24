@@ -9,7 +9,12 @@ public class MultiplyFractionsTest {
     }
 
     @Test
-    void multiplicationByOneResultsInOne() {
+    void multiplicationByOneResultsInSameNumber() {
         Assertions.assertEquals(new Fraction(1, 2), new Fraction(1, 2).times(new Fraction(1)));
+    }
+
+    @Test
+    void multiplicationByNegativeOneResultsInSameNumberButNegativeSign() {
+        Assertions.assertEquals(new Fraction(-1, 2), new Fraction(1, 2).times(new Fraction(-1)));
     }
 }
