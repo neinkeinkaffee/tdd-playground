@@ -3,27 +3,27 @@ import org.junit.jupiter.api.Test;
 
 public class EqualsFractionTest {
     @Test
-    void ZeroEqualsZero() {
+    void zeroShouldEqualZero() {
         Assertions.assertEquals(new Fraction(0), new Fraction(0));
     }
 
     @Test
-    void WholeNumberEqualsWholeNumber() {
+    void wholeNumberShouldEqualWholeNumber() {
         Assertions.assertEquals(new Fraction(4), new Fraction(4));
     }
 
     @Test
-    void FractionEqualsFractionWithSameNumerator() {
+    void fractionShouldEqualFractionWithSameNumerator() {
         Assertions.assertEquals(new Fraction(1, 4), new Fraction(1,4));
     }
 
     @Test
-    void FractionDoesNotEqualFractionWithDifferentDenominator() {
+    void fractionShouldNotEqualFractionWithDifferentDenominator() {
         Assertions.assertNotEquals(new Fraction(1, 4), new Fraction(1,5));
     }
 
     @Test
-    void FractionEqualsWholeNumber() {
+    void fractionShouldEqualWholeNumber() {
         Assertions.assertEquals(new Fraction(4), new Fraction(4, 1));
     }
 }
