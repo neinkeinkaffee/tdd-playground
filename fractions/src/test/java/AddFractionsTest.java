@@ -4,32 +4,27 @@ import org.junit.jupiter.api.Test;
 public class AddFractionsTest {
     @Test
     void shouldAddZeroAndZero() {
-        Fraction sum = new Fraction(0).plus(new Fraction(0));
-        Assertions.assertEquals(0, sum.getNumerator());
+        Assertions.assertEquals(new Fraction(0), new Fraction(0).plus(new Fraction(0)));
     }
 
     @Test
     void shouldAddOneAndZero() {
-        Fraction sum = new Fraction(1).plus(new Fraction(0));
-        Assertions.assertEquals(1, sum.getNumerator());
+        Assertions.assertEquals(new Fraction(1), new Fraction(1).plus(new Fraction(0)));
     }
 
     @Test
     void shouldAddTwoPositiveWholeNumbers() {
-        Fraction sum = new Fraction(1).plus(new Fraction(5));
-        Assertions.assertEquals(6, sum.getNumerator());
+        Assertions.assertEquals(new Fraction(6), new Fraction(1).plus(new Fraction(5)));
     }
 
     @Test
     void shouldAddTwoWholeNumbers() {
-        Fraction sum = new Fraction(1).plus(new Fraction(-5));
-        Assertions.assertEquals(-4, sum.getNumerator());
+        Assertions.assertEquals(new Fraction(-4), new Fraction(1).plus(new Fraction(-5)));
     }
 
     @Test
     void shouldAddFractionsWithEqualDenominator() {
-        Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
-        Assertions.assertEquals(3, sum.getNumerator());
-        Assertions.assertEquals(5, sum.getDenominator());
+        Assertions.assertEquals(new Fraction(3, 5),
+                new Fraction(1, 5).plus(new Fraction(2, 5)));
     }
 }
