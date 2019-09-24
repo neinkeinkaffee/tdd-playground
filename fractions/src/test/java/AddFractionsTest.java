@@ -15,8 +15,14 @@ public class AddFractionsTest {
     }
 
     @Test
-    void shouldAddTwoWholeNumbers() {
+    void shouldAddTwoPositiveWholeNumbers() {
         Fraction sum = new Fraction(1).plus(new Fraction(5));
         Assertions.assertEquals(6, sum.intValue());
+    }
+
+    @Test
+    void shouldAddTwoWholeNumbers() {
+        Fraction sum = new Fraction(1).plus(new Fraction(-5));
+        Assertions.assertEquals(-4, sum.intValue());
     }
 }
