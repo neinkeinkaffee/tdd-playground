@@ -7,4 +7,9 @@ public class MultiplyFractionsTest {
     void multiplationByZeroResultsInZero() {
         Assertions.assertEquals(new Fraction(0), new Fraction(1, 2).times(new Fraction(0)));
     }
+
+    @Test
+    void multiplicationByOneResultsInOne() {
+        Assertions.assertEquals(new Fraction(1, 2), new Fraction(1, 2).times(new Fraction(1)));
+    }
 }
