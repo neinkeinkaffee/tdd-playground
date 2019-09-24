@@ -1,0 +1,16 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class AddFractionsTest {
+    @Test
+    void shouldAddZeroPlusZero() {
+        Fraction sum = new Fraction(0).plus(new Fraction(0));
+        Assertions.assertEquals(0, sum.intValue());
+    }
+
+    @Test
+    void shouldAddOnePlusZero() {
+        Fraction sum = new Fraction(1).plus(new Fraction(0));
+        Assertions.assertEquals(1, sum.intValue());
+    }
+}
