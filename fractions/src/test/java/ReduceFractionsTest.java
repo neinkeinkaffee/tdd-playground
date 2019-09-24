@@ -13,4 +13,9 @@ public class ReduceFractionsTest {
     void fractionShouldReduceToFractionWithCommonDenominator() {
         Assertions.assertEquals(new Fraction(1, 2), new Fraction(2,4));
     }
+
+    @Test
+    void fractionShouldReduceToFractionWithCommonDenominatorForNegativeFractions() {
+        Assertions.assertEquals(new Fraction(-1, 2), new Fraction(-2,4));
+    }
 }
