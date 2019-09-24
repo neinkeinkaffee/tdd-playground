@@ -21,4 +21,9 @@ public class EqualsFractionTest {
     void FractionDoesNotEqualFractionWithDifferentDenominator() {
         Assertions.assertNotEquals(new Fraction(1, 4), new Fraction(1,5));
     }
+
+    @Test
+    void FractionEqualsWholeNumber() {
+        Assertions.assertEquals(new Fraction(4), new Fraction(4, 1));
+    }
 }
