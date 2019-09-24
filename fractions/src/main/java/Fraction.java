@@ -45,9 +45,8 @@ public class Fraction {
     }
 
     private int gcd(int a, int b) {
-        int temp;
         while (b != 0) {
-            temp = b;
+            int temp = b;
             b = a % b;
             a = temp;
         }
