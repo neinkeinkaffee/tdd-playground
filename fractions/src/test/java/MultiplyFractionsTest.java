@@ -11,6 +11,7 @@ public class MultiplyFractionsTest {
     @Test
     void multiplicationByOneResultsInSameNumber() {
         Assertions.assertEquals(new Fraction(1, 2), new Fraction(1, 2).times(new Fraction(1)));
+        Assertions.assertEquals(new Fraction(-1, 2), new Fraction(-1, 2).times(new Fraction(1)));
     }
 
     @Test
