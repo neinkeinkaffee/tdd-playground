@@ -17,7 +17,8 @@ public class Fraction {
         if (other == null || this.getClass() != other.getClass()) {
             return false;
         }
-        return this.getNumerator() == ((Fraction) other).getNumerator();
+        return (this.getNumerator() == ((Fraction) other).getNumerator()) &&
+                (this.getDenominator() == ((Fraction) other).getDenominator());
     }
 
     public Fraction plus(Fraction other) {

@@ -11,4 +11,14 @@ public class EqualsFractionTest {
     void WholeNumberEqualsWholeNumber() {
         Assertions.assertEquals(new Fraction(4), new Fraction(4));
     }
+
+    @Test
+    void FractionEqualsFractionWithSameNumerator() {
+        Assertions.assertEquals(new Fraction(1, 4), new Fraction(1,4));
+    }
+
+    @Test
+    void FractionDoesNotEqualFractionWithDifferentDenominator() {
+        Assertions.assertNotEquals(new Fraction(1, 4), new Fraction(1,5));
+    }
 }
