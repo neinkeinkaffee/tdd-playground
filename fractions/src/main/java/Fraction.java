@@ -41,7 +41,7 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction other) {
-        return new Fraction(this.numerator + other.getNumerator(), this.denominator);
+        return new Fraction(this.numerator * other.getDenominator() + other.getNumerator() * this.getDenominator(), this.denominator * other.getDenominator());
     }
 
     private int gcd(int a, int b) {

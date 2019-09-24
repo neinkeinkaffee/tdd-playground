@@ -29,8 +29,21 @@ public class AddFractionsTest {
     }
 
     @Test
-    void shouldAddFractionsAndReduceResult() {
+    void shouldAddFractionsWithEqualDenominatorAndReduceResult() {
         Assertions.assertEquals(new Fraction(1, 2),
                 new Fraction(1, 4).plus(new Fraction(1, 4)));
+
+    }
+
+    @Test
+    void shouldAddFractionsWithDifferentDenominators() {
+        Assertions.assertEquals(new Fraction(5, 6),
+                new Fraction(1, 2).plus(new Fraction(1, 3)));
+    }
+
+    @Test
+    void shouldAddFractionsWithDifferentDenominatorsAndReduceResult() {
+        Assertions.assertEquals(new Fraction(5, 12),
+                new Fraction(1, 4).plus(new Fraction(1, 6)));
     }
 }
