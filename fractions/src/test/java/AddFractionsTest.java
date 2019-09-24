@@ -27,4 +27,10 @@ public class AddFractionsTest {
         Assertions.assertEquals(new Fraction(3, 5),
                 new Fraction(1, 5).plus(new Fraction(2, 5)));
     }
+
+    @Test
+    void shouldAddFractionsAndReduceResult() {
+        Assertions.assertEquals(new Fraction(1, 2),
+                new Fraction(1, 4).plus(new Fraction(1, 4)));
+    }
 }
