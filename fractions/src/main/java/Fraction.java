@@ -12,6 +12,14 @@ public class Fraction {
         this.denominator = denominator;
     }
 
+    @Override
+    public boolean equals(Object other) {
+        if (other == null || this.getClass() != other.getClass()) {
+            return false;
+        }
+        return this.getNumerator() == ((Fraction) other).getNumerator();
+    }
+
     public Fraction plus(Fraction other) {
         return new Fraction(this.numerator + other.getNumerator(), this.denominator);
     }
