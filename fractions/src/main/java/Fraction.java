@@ -14,6 +14,16 @@ public class Fraction {
     }
 
     @Override
+    public String toString() {
+        return String.format("%d/%d", this.numerator, this.denominator);
+    }
+
+    @Override
+    public int hashCode() {
+        return this.numerator * 19 + this.denominator;
+    }
+
+    @Override
     public boolean equals(Object other) {
         if (other == null || this.getClass() != other.getClass()) {
             return false;
