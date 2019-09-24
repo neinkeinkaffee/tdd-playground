@@ -4,19 +4,26 @@ import org.junit.jupiter.api.Test;
 public class MultiplyFractionsTest {
 
     @Test
-    void multiplationByZeroResultsInZero() {
+    void multiplyingByZeroResultsInZero() {
         Assertions.assertEquals(new Fraction(0), new Fraction(1, 2).times(new Fraction(0)));
     }
 
     @Test
-    void multiplicationByOneResultsInSameNumber() {
+    void multiplyingByOneResultsInSameNumber() {
         Assertions.assertEquals(new Fraction(1, 2), new Fraction(1, 2).times(new Fraction(1)));
         Assertions.assertEquals(new Fraction(-1, 2), new Fraction(-1, 2).times(new Fraction(1)));
     }
 
     @Test
-    void multiplicationByNegativeOneResultsInSameNumberButNegativeSign() {
+    void multiplyingByNegativeOneResultsInSameNumberButNegativeSign() {
         Assertions.assertEquals(new Fraction(-1, 2), new Fraction(1, 2).times(new Fraction(-1)));
         Assertions.assertEquals(new Fraction(1, 2), new Fraction(-1, 2).times(new Fraction(-1)));
+    }
+
+    @Test
+    void multiplyingEqualFractions() {
+        Assertions.assertEquals(new Fraction(1, 4), new Fraction(1, 2).times(new Fraction(1, 2)));
+        Assertions.assertEquals(new Fraction(1, 4), new Fraction(-1, 2).times(new Fraction(-1, 2)));
+        Assertions.assertEquals(new Fraction(9, 25), new Fraction(3, 5).times(new Fraction(3, 5)));
     }
 }

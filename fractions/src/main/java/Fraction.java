@@ -45,6 +45,6 @@ public class Fraction {
     }
 
     public Fraction times(Fraction other) {
-        return new Fraction(this.numerator * other.getNumerator(), this.denominator);
+        return new Fraction(this.numerator * other.getNumerator(), this.denominator * other.getDenominator());
     }
 }
