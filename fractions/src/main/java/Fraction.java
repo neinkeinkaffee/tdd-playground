@@ -9,8 +9,9 @@ public class Fraction {
 
     public Fraction(int numerator, int denominator) {
         int signOfDenominator = denominator < 0 ? -1 : 1;
-        this.numerator = signOfDenominator * numerator;
-        this.denominator = signOfDenominator * denominator;
+        int gcd = gcd(numerator, denominator);
+        this.numerator = signOfDenominator * numerator / gcd;
+        this.denominator = signOfDenominator * denominator / gcd;
     }
 
     @Override
@@ -32,5 +33,15 @@ public class Fraction {
 
     public Fraction plus(Fraction other) {
         return new Fraction(this.numerator + other.getNumerator(), this.denominator);
+    }
+
+    private int gcd(int a, int b) {
+        int temp;
+        while (b != 0) {
+            temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return Math.abs(a);
     }
 }
