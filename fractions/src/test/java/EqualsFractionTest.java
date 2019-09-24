@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledIf;
 
 public class EqualsFractionTest {
     @Test
@@ -25,5 +27,10 @@ public class EqualsFractionTest {
     @Test
     void fractionShouldEqualWholeNumber() {
         Assertions.assertEquals(new Fraction(4), new Fraction(4, 1));
+    }
+
+    @Test
+    void fractionWithNegativeNumeratorShouldEqualFractionWithNegativeDenominator() {
+        Assertions.assertEquals(new Fraction(-1, 4), new Fraction(1,-4));
     }
 }

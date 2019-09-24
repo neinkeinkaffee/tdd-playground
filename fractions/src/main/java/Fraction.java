@@ -8,8 +8,9 @@ public class Fraction {
     }
 
     public Fraction(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
+        int signOfDenominator = denominator < 0 ? -1 : 1;
+        this.numerator = signOfDenominator * numerator;
+        this.denominator = signOfDenominator * denominator;
     }
 
     @Override
@@ -21,15 +22,15 @@ public class Fraction {
                 (this.getDenominator() == ((Fraction) other).getDenominator());
     }
 
-    public Fraction plus(Fraction other) {
-        return new Fraction(this.numerator + other.getNumerator(), this.denominator);
-    }
-
     public int getNumerator() {
         return numerator;
     }
 
     public int getDenominator() {
         return denominator;
+    }
+
+    public Fraction plus(Fraction other) {
+        return new Fraction(this.numerator + other.getNumerator(), this.denominator);
     }
 }
