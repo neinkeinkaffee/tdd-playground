@@ -8,7 +8,7 @@ public class Fraction {
 
     public Fraction(int numerator, int denominator) {
         int signOfDenominator = denominator < 0 ? -1 : 1;
-        int gcd = gcd(numerator, denominator);
+        int gcd = NumberTheory.gcd(numerator, denominator);
         this.numerator = signOfDenominator * numerator / gcd;
         this.denominator = signOfDenominator * denominator / gcd;
     }
@@ -44,12 +44,4 @@ public class Fraction {
         return new Fraction(this.numerator * other.getDenominator() + other.getNumerator() * this.getDenominator(), this.denominator * other.getDenominator());
     }
 
-    private int gcd(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
-        }
-        return Math.abs(a);
-    }
 }
