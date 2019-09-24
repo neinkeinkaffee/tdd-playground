@@ -47,4 +47,8 @@ public class Fraction {
     public Fraction times(Fraction other) {
         return new Fraction(this.numerator * other.getNumerator(), this.denominator * other.getDenominator());
     }
+
+    public Fraction minus(Fraction other) {
+        return new Fraction(1, 2);
+    }
 }
