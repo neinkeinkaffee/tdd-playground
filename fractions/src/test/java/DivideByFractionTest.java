@@ -18,4 +18,9 @@ public class DivideByFractionTest {
     void dividingByFraction() {
         Assertions.assertEquals(new Fraction(15, 4), new Fraction(3, 4).by(new Fraction(1, 5)));
     }
+
+    @Test
+    void dividingByFractionAndRducingResult() {
+        Assertions.assertEquals(new Fraction(9, 2), new Fraction(3, 4).by(new Fraction(1, 6)));
+    }
 }
