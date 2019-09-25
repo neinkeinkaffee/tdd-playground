@@ -49,6 +49,6 @@ public class Fraction {
     }
 
     public Fraction minus(Fraction other) {
-        return new Fraction(1, 2);
+        return new Fraction(this.numerator * other.getDenominator() - other.getNumerator() * this.denominator, this.denominator * other.getDenominator());
     }
 }
