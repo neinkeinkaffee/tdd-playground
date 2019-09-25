@@ -55,4 +55,8 @@ public class Fraction {
     public Fraction times(int scalar) {
         return this.times(new Fraction(scalar));
     }
+
+    public Fraction by(Fraction other) {
+        return new Fraction(this.numerator * other.getDenominator(), this.denominator * other.getNumerator());
+    }
 }
