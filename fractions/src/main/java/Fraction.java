@@ -49,10 +49,10 @@ public class Fraction {
     }
 
     public Fraction minus(Fraction other) {
-        return this.plus(other.times(new Fraction(-1)));
+        return this.plus(other.times(-1));
     }
 
     public Fraction times(int scalar) {
-        return new Fraction(this.numerator * scalar, this.denominator);
+        return this.times(new Fraction(scalar));
     }
 }

@@ -17,4 +17,9 @@ public class MultiplyByScalarTest {
     void multiplyingFractionWithOneShouldResultInSameNumber() {
         Assertions.assertEquals(new Fraction(4, 3), new Fraction(4, 3).times(1));
     }
+
+    @Test
+    void multiplyingFractionWithOtherNumberShouldResultInSameNumber() {
+        Assertions.assertEquals(new Fraction(20, 3), new Fraction(4, 3).times(5));
+    }
 }
